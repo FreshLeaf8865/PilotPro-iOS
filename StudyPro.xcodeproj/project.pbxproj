@@ -1,0 +1,919 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A427EDE1BB24266000F4093 /* StudyQuizTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A427EDD1BB24266000F4093 /* StudyQuizTableViewCell.m */; };
+		6A427EE31BB2DA8E000F4093 /* QuizCatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A427EE21BB2DA8E000F4093 /* QuizCatViewController.m */; };
+		6A427EE61BB2DAE5000F4093 /* QuizCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A427EE51BB2DAE5000F4093 /* QuizCategoryTableViewCell.m */; };
+		6A427EEC1BB2EA49000F4093 /* QuizQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A427EEB1BB2EA49000F4093 /* QuizQuestionViewController.m */; };
+		6AED43EF1BB4148A007CF5AA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AED43ED1BB4148A007CF5AA /* Main_iPad.storyboard */; };
+		6AF12E5D1BB18DF100805FDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12E5C1BB18DF100805FDC /* main.m */; };
+		6AF12E601BB18DF100805FDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12E5F1BB18DF100805FDC /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6AF12E631BB18DF100805FDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12E621BB18DF100805FDC /* ViewController.m */; };
+		6AF12E661BB18DF200805FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E641BB18DF200805FDC /* Main.storyboard */; };
+		6AF12E681BB18DF200805FDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E671BB18DF200805FDC /* Images.xcassets */; };
+		6AF12E6B1BB18DF200805FDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E691BB18DF200805FDC /* LaunchScreen.xib */; };
+		6AF12E771BB18DF200805FDC /* StudyProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12E761BB18DF200805FDC /* StudyProTests.m */; };
+		6AF12EA31BB196B700805FDC /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E831BB196B600805FDC /* back@2x.png */; };
+		6AF12EA41BB196B700805FDC /* back_button@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E841BB196B600805FDC /* back_button@2x~iphone.png */; };
+		6AF12EA51BB196B700805FDC /* back_button_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E851BB196B600805FDC /* back_button_ipad.png */; };
+		6AF12EA61BB196B700805FDC /* back_button~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E861BB196B600805FDC /* back_button~iphone.png */; };
+		6AF12EA71BB196B700805FDC /* back_default_pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E871BB196B600805FDC /* back_default_pad.png */; };
+		6AF12EA81BB196B700805FDC /* back_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E881BB196B600805FDC /* back_ipad.png */; };
+		6AF12EA91BB196B700805FDC /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E891BB196B600805FDC /* btn_back@2x.png */; };
+		6AF12EAA1BB196B700805FDC /* btn_back_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E8A1BB196B600805FDC /* btn_back_ipad.png */; };
+		6AF12EAB1BB196B700805FDC /* btn_grade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E8B1BB196B600805FDC /* btn_grade@2x.png */; };
+		6AF12EAC1BB196B700805FDC /* btn_grade_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E8C1BB196B600805FDC /* btn_grade_ipad.png */; };
+		6AF12EAD1BB196B700805FDC /* btn_mark_question@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E8D1BB196B700805FDC /* btn_mark_question@2x.png */; };
+		6AF12EAE1BB196B700805FDC /* btn_mark_question_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E8E1BB196B700805FDC /* btn_mark_question_ipad.png */; };
+		6AF12EAF1BB196B700805FDC /* btn_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E8F1BB196B700805FDC /* btn_next@2x.png */; };
+		6AF12EB01BB196B700805FDC /* btn_next_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E901BB196B700805FDC /* btn_next_ipad.png */; };
+		6AF12EB11BB196B700805FDC /* btn_quiz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E911BB196B700805FDC /* btn_quiz@2x.png */; };
+		6AF12EB21BB196B700805FDC /* btn_quiz_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E921BB196B700805FDC /* btn_quiz_ipad.png */; };
+		6AF12EB31BB196B700805FDC /* btn_reset_scores~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E931BB196B700805FDC /* btn_reset_scores~ipad.png */; };
+		6AF12EB41BB196B700805FDC /* btn_study@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E941BB196B700805FDC /* btn_study@2x.png */; };
+		6AF12EB51BB196B700805FDC /* btn_study_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E951BB196B700805FDC /* btn_study_ipad.png */; };
+		6AF12EB71BB196B700805FDC /* Default_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E971BB196B700805FDC /* Default_ipad.png */; };
+		6AF12EB81BB196B700805FDC /* devide_line_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E981BB196B700805FDC /* devide_line_ipad.png */; };
+		6AF12EB91BB196B700805FDC /* drop_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E991BB196B700805FDC /* drop_down@2x.png */; };
+		6AF12EBA1BB196B700805FDC /* green_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E9A1BB196B700805FDC /* green_dot@2x.png */; };
+		6AF12EBB1BB196B700805FDC /* green_dot_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E9B1BB196B700805FDC /* green_dot_ipad.png */; };
+		6AF12EBC1BB196B700805FDC /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E9C1BB196B700805FDC /* placeholder.png */; };
+		6AF12EBD1BB196B700805FDC /* quiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E9D1BB196B700805FDC /* quiz.png */; };
+		6AF12EBE1BB196B700805FDC /* red_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E9E1BB196B700805FDC /* red_dot@2x.png */; };
+		6AF12EBF1BB196B700805FDC /* red_dot_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12E9F1BB196B700805FDC /* red_dot_ipad.png */; };
+		6AF12EC01BB196B700805FDC /* study.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12EA01BB196B700805FDC /* study.png */; };
+		6AF12EC11BB196B700805FDC /* yellow_dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12EA11BB196B700805FDC /* yellow_dot@2x.png */; };
+		6AF12EC21BB196B700805FDC /* yellow_dot_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12EA21BB196B700805FDC /* yellow_dot_ipad.png */; };
+		6AF12EC41BB1997D00805FDC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12EC31BB1997D00805FDC /* Default.png */; };
+		6AF12EC71BB1A4FB00805FDC /* StudyCatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12EC61BB1A4FB00805FDC /* StudyCatViewController.m */; };
+		6AF12ECA1BB1A70200805FDC /* StudyCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12EC91BB1A70200805FDC /* StudyCategoryTableViewCell.m */; };
+		6AF12ECC1BB1B02C00805FDC /* no_media.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6AF12ECB1BB1B02C00805FDC /* no_media.jpg */; };
+		6AF12ED11BB1D23B00805FDC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF12ED01BB1D23B00805FDC /* libsqlite3.dylib */; };
+		6AF12ED91BB1D44B00805FDC /* SQLiteDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12ED41BB1D44B00805FDC /* SQLiteDatabase.m */; };
+		6AF12EDA1BB1D44B00805FDC /* SQLiteResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12ED61BB1D44B00805FDC /* SQLiteResult.m */; };
+		6AF12EDB1BB1D44B00805FDC /* SQLiteRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12ED81BB1D44B00805FDC /* SQLiteRow.m */; };
+		6AF12EDF1BB1D90900805FDC /* CategoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12EDE1BB1D90900805FDC /* CategoryData.m */; };
+		6AF12EE21BB2156500805FDC /* QuestionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12EE11BB2156500805FDC /* QuestionData.m */; };
+		6AF12EE51BB2221E00805FDC /* StudyQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF12EE41BB2221E00805FDC /* StudyQuestionViewController.m */; };
+		6E42873A1C7C4AF0009C7681 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E4287391C7C4AEF009C7681 /* libiconv.tbd */; };
+		6E42873C1C7C4D40009C7681 /* studypro.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 6E42873B1C7C4D40009C7681 /* studypro.sqlite */; };
+		6EDD7B9D1C6A6880006DCBCD /* iPhone_QuestionImageButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDD7B9C1C6A6880006DCBCD /* iPhone_QuestionImageButton.png */; };
+		6EDD7BA11C6AD820006DCBCD /* iPhone_QuizMarkButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EDD7BA01C6AD820006DCBCD /* iPhone_QuizMarkButton.png */; };
+		6EDD7BA31C787340006DCBCD /* LaunchScreen_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EDD7BA21C787340006DCBCD /* LaunchScreen_iPad.xib */; };
+		FB4F2D191C5F4D2B008753E0 /* iPhone_Back.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4F2D111C5F4D2B008753E0 /* iPhone_Back.png */; };
+		FB4F2D1A1C5F4D2B008753E0 /* iPhone_bars.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4F2D121C5F4D2B008753E0 /* iPhone_bars.png */; };
+		FB4F2D1B1C5F4D2B008753E0 /* iPhone_Line.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4F2D131C5F4D2B008753E0 /* iPhone_Line.png */; };
+		FB4F2D1C1C5F4D2B008753E0 /* iPhone_Markquestion.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4F2D141C5F4D2B008753E0 /* iPhone_Markquestion.png */; };
+		FB4F2D1D1C5F4D2B008753E0 /* iphone_next.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4F2D151C5F4D2B008753E0 /* iphone_next.png */; };
+		FB4F2D1E1C5F4D2B008753E0 /* Quizbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4F2D161C5F4D2B008753E0 /* Quizbutton.png */; };
+		FB4F2D1F1C5F4D2B008753E0 /* studybutton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4F2D171C5F4D2B008753E0 /* studybutton.png */; };
+		FB4F2D201C5F4D2B008753E0 /* testbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4F2D181C5F4D2B008753E0 /* testbutton.png */; };
+		FB89BCEF1C61E66E004108B6 /* AbrilFatface-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCE51C61E66E004108B6 /* AbrilFatface-Regular.ttf */; };
+		FB89BCF01C61E66E004108B6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCE61C61E66E004108B6 /* Poppins-Bold.ttf */; };
+		FB89BCF11C61E66E004108B6 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCE71C61E66E004108B6 /* Poppins-Light.ttf */; };
+		FB89BCF21C61E66E004108B6 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCE81C61E66E004108B6 /* Poppins-Medium.ttf */; };
+		FB89BCF31C61E66E004108B6 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCE91C61E66E004108B6 /* Poppins-Regular.ttf */; };
+		FB89BCF41C61E66E004108B6 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCEA1C61E66E004108B6 /* Poppins-SemiBold.ttf */; };
+		FB89BCF51C61E66E004108B6 /* iPhone_BackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCEB1C61E66E004108B6 /* iPhone_BackArrow.png */; };
+		FB89BCF61C61E66E004108B6 /* iPhone_BackBlackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCEC1C61E66E004108B6 /* iPhone_BackBlackArrow.png */; };
+		FB89BCF71C61E66E004108B6 /* iPhone_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCED1C61E66E004108B6 /* iPhone_menu.png */; };
+		FB89BCF81C61E66E004108B6 /* iPhone_white_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FB89BCEE1C61E66E004108B6 /* iPhone_white_menu.png */; };
+		FBEC6D481BFCE62200D69C8D /* studypro.xls in Resources */ = {isa = PBXBuildFile; fileRef = FBEC6D471BFCE62200D69C8D /* studypro.xls */; };
+		FBF340071BFCF794007C8235 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF340061BFCF794007C8235 /* QuartzCore.framework */; };
+		FBF340091BFCF96A007C8235 /* libDHxlsReaderIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBEC6D3E1BFCE19400D69C8D /* libDHxlsReaderIOS.a */; };
+		FBF3401A1BFD1418007C8235 /* itunesartwork.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF340121BFD1418007C8235 /* itunesartwork.png */; };
+		FBF3401B1BFD1418007C8235 /* itunesartwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF340131BFD1418007C8235 /* itunesartwork@2x.png */; };
+		FBF340321BFD1FF3007C8235 /* icons_29.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF3402C1BFD1FF3007C8235 /* icons_29.png */; };
+		FBF340331BFD1FF3007C8235 /* icons_58.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF3402D1BFD1FF3007C8235 /* icons_58.png */; };
+		FBF340341BFD1FF3007C8235 /* icons_60.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF3402E1BFD1FF3007C8235 /* icons_60.png */; };
+		FBF340351BFD1FF3007C8235 /* icons_80.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF3402F1BFD1FF3007C8235 /* icons_80.png */; };
+		FBF340361BFD1FF3007C8235 /* icons_120.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF340301BFD1FF3007C8235 /* icons_120.png */; };
+		FBF340371BFD1FF3007C8235 /* icons_152.png in Resources */ = {isa = PBXBuildFile; fileRef = FBF340311BFD1FF3007C8235 /* icons_152.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AF12E711BB18DF200805FDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AF12E4F1BB18DF100805FDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AF12E561BB18DF100805FDC;
+			remoteInfo = StudyPro;
+		};
+		FBEC6D3D1BFCE19400D69C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBEC6D381BFCE19300D69C8D /* DHxlsReaderIOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DEB78ABF14BB9ABF00845894;
+			remoteInfo = DHxlsReaderIOS;
+		};
+		FBEC6D3F1BFCE19400D69C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBEC6D381BFCE19300D69C8D /* DHxlsReaderIOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 97BCBBE716DD4E9A00FF978C;
+			remoteInfo = DHxlsReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6A427EDC1BB24248000F4093 /* StudyQuizTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyQuizTableViewCell.h; sourceTree = "<group>"; };
+		6A427EDD1BB24266000F4093 /* StudyQuizTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyQuizTableViewCell.m; sourceTree = "<group>"; };
+		6A427EE11BB2DA5C000F4093 /* QuizCatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizCatViewController.h; sourceTree = "<group>"; };
+		6A427EE21BB2DA8E000F4093 /* QuizCatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizCatViewController.m; path = Quiz/QuizCatViewController.m; sourceTree = "<group>"; };
+		6A427EE41BB2DAC9000F4093 /* QuizCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizCategoryTableViewCell.h; sourceTree = "<group>"; };
+		6A427EE51BB2DAE5000F4093 /* QuizCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizCategoryTableViewCell.m; path = Quiz/QuizCategoryTableViewCell.m; sourceTree = "<group>"; };
+		6A427EEA1BB2EA49000F4093 /* QuizQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizQuestionViewController.h; path = Quiz/QuizQuestionViewController.h; sourceTree = "<group>"; };
+		6A427EEB1BB2EA49000F4093 /* QuizQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizQuestionViewController.m; path = Quiz/QuizQuestionViewController.m; sourceTree = "<group>"; };
+		6AED43EE1BB4148A007CF5AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		6AF12E571BB18DF100805FDC /* StudyPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF12E5B1BB18DF100805FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AF12E5C1BB18DF100805FDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6AF12E5E1BB18DF100805FDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6AF12E5F1BB18DF100805FDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6AF12E611BB18DF100805FDC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6AF12E621BB18DF100805FDC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6AF12E651BB18DF200805FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6AF12E671BB18DF200805FDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6AF12E6A1BB18DF200805FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6AF12E701BB18DF200805FDC /* StudyProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF12E751BB18DF200805FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AF12E761BB18DF200805FDC /* StudyProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudyProTests.m; sourceTree = "<group>"; };
+		6AF12E831BB196B600805FDC /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		6AF12E841BB196B600805FDC /* back_button@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_button@2x~iphone.png"; sourceTree = "<group>"; };
+		6AF12E851BB196B600805FDC /* back_button_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button_ipad.png; sourceTree = "<group>"; };
+		6AF12E861BB196B600805FDC /* back_button~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_button~iphone.png"; sourceTree = "<group>"; };
+		6AF12E871BB196B600805FDC /* back_default_pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_default_pad.png; sourceTree = "<group>"; };
+		6AF12E881BB196B600805FDC /* back_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_ipad.png; sourceTree = "<group>"; };
+		6AF12E891BB196B600805FDC /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
+		6AF12E8A1BB196B600805FDC /* btn_back_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_ipad.png; sourceTree = "<group>"; };
+		6AF12E8B1BB196B600805FDC /* btn_grade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_grade@2x.png"; sourceTree = "<group>"; };
+		6AF12E8C1BB196B600805FDC /* btn_grade_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_grade_ipad.png; sourceTree = "<group>"; };
+		6AF12E8D1BB196B700805FDC /* btn_mark_question@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_mark_question@2x.png"; sourceTree = "<group>"; };
+		6AF12E8E1BB196B700805FDC /* btn_mark_question_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_mark_question_ipad.png; sourceTree = "<group>"; };
+		6AF12E8F1BB196B700805FDC /* btn_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_next@2x.png"; sourceTree = "<group>"; };
+		6AF12E901BB196B700805FDC /* btn_next_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_next_ipad.png; sourceTree = "<group>"; };
+		6AF12E911BB196B700805FDC /* btn_quiz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_quiz@2x.png"; sourceTree = "<group>"; };
+		6AF12E921BB196B700805FDC /* btn_quiz_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_quiz_ipad.png; sourceTree = "<group>"; };
+		6AF12E931BB196B700805FDC /* btn_reset_scores~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_reset_scores~ipad.png"; sourceTree = "<group>"; };
+		6AF12E941BB196B700805FDC /* btn_study@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_study@2x.png"; sourceTree = "<group>"; };
+		6AF12E951BB196B700805FDC /* btn_study_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_study_ipad.png; sourceTree = "<group>"; };
+		6AF12E971BB196B700805FDC /* Default_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default_ipad.png; sourceTree = "<group>"; };
+		6AF12E981BB196B700805FDC /* devide_line_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devide_line_ipad.png; sourceTree = "<group>"; };
+		6AF12E991BB196B700805FDC /* drop_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop_down@2x.png"; sourceTree = "<group>"; };
+		6AF12E9A1BB196B700805FDC /* green_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green_dot@2x.png"; sourceTree = "<group>"; };
+		6AF12E9B1BB196B700805FDC /* green_dot_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_dot_ipad.png; sourceTree = "<group>"; };
+		6AF12E9C1BB196B700805FDC /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		6AF12E9D1BB196B700805FDC /* quiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quiz.png; sourceTree = "<group>"; };
+		6AF12E9E1BB196B700805FDC /* red_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_dot@2x.png"; sourceTree = "<group>"; };
+		6AF12E9F1BB196B700805FDC /* red_dot_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_dot_ipad.png; sourceTree = "<group>"; };
+		6AF12EA01BB196B700805FDC /* study.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = study.png; sourceTree = "<group>"; };
+		6AF12EA11BB196B700805FDC /* yellow_dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow_dot@2x.png"; sourceTree = "<group>"; };
+		6AF12EA21BB196B700805FDC /* yellow_dot_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_dot_ipad.png; sourceTree = "<group>"; };
+		6AF12EC31BB1997D00805FDC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6AF12EC51BB1A4DA00805FDC /* StudyCatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyCatViewController.h; sourceTree = "<group>"; };
+		6AF12EC61BB1A4FB00805FDC /* StudyCatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyCatViewController.m; sourceTree = "<group>"; };
+		6AF12EC81BB1A70200805FDC /* StudyCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudyCategoryTableViewCell.h; path = Study/StudyCategoryTableViewCell.h; sourceTree = "<group>"; };
+		6AF12EC91BB1A70200805FDC /* StudyCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyCategoryTableViewCell.m; path = Study/StudyCategoryTableViewCell.m; sourceTree = "<group>"; };
+		6AF12ECB1BB1B02C00805FDC /* no_media.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = no_media.jpg; sourceTree = "<group>"; };
+		6AF12ED01BB1D23B00805FDC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6AF12ED31BB1D44B00805FDC /* SQLiteDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteDatabase.h; sourceTree = "<group>"; };
+		6AF12ED41BB1D44B00805FDC /* SQLiteDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteDatabase.m; sourceTree = "<group>"; };
+		6AF12ED51BB1D44B00805FDC /* SQLiteResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteResult.h; sourceTree = "<group>"; };
+		6AF12ED61BB1D44B00805FDC /* SQLiteResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteResult.m; sourceTree = "<group>"; };
+		6AF12ED71BB1D44B00805FDC /* SQLiteRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteRow.h; sourceTree = "<group>"; };
+		6AF12ED81BB1D44B00805FDC /* SQLiteRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteRow.m; sourceTree = "<group>"; };
+		6AF12EDD1BB1D8E000805FDC /* CategoryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryData.h; sourceTree = "<group>"; };
+		6AF12EDE1BB1D90900805FDC /* CategoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryData.m; sourceTree = "<group>"; };
+		6AF12EE01BB2154B00805FDC /* QuestionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionData.h; sourceTree = "<group>"; };
+		6AF12EE11BB2156500805FDC /* QuestionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionData.m; sourceTree = "<group>"; };
+		6AF12EE31BB221FA00805FDC /* StudyQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyQuestionViewController.h; sourceTree = "<group>"; };
+		6AF12EE41BB2221E00805FDC /* StudyQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyQuestionViewController.m; sourceTree = "<group>"; };
+		6E4287391C7C4AEF009C7681 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		6E42873B1C7C4D40009C7681 /* studypro.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = studypro.sqlite; sourceTree = "<group>"; };
+		6EDD7B9C1C6A6880006DCBCD /* iPhone_QuestionImageButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_QuestionImageButton.png; sourceTree = "<group>"; };
+		6EDD7BA01C6AD820006DCBCD /* iPhone_QuizMarkButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_QuizMarkButton.png; sourceTree = "<group>"; };
+		6EDD7BA21C787340006DCBCD /* LaunchScreen_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen_iPad.xib; sourceTree = "<group>"; };
+		FB4F2D111C5F4D2B008753E0 /* iPhone_Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_Back.png; sourceTree = "<group>"; };
+		FB4F2D121C5F4D2B008753E0 /* iPhone_bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_bars.png; sourceTree = "<group>"; };
+		FB4F2D131C5F4D2B008753E0 /* iPhone_Line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_Line.png; sourceTree = "<group>"; };
+		FB4F2D141C5F4D2B008753E0 /* iPhone_Markquestion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_Markquestion.png; sourceTree = "<group>"; };
+		FB4F2D151C5F4D2B008753E0 /* iphone_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone_next.png; sourceTree = "<group>"; };
+		FB4F2D161C5F4D2B008753E0 /* Quizbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Quizbutton.png; sourceTree = "<group>"; };
+		FB4F2D171C5F4D2B008753E0 /* studybutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = studybutton.png; sourceTree = "<group>"; };
+		FB4F2D181C5F4D2B008753E0 /* testbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testbutton.png; sourceTree = "<group>"; };
+		FB89BCE51C61E66E004108B6 /* AbrilFatface-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AbrilFatface-Regular.ttf"; sourceTree = "<group>"; };
+		FB89BCE61C61E66E004108B6 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		FB89BCE71C61E66E004108B6 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		FB89BCE81C61E66E004108B6 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		FB89BCE91C61E66E004108B6 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		FB89BCEA1C61E66E004108B6 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		FB89BCEB1C61E66E004108B6 /* iPhone_BackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_BackArrow.png; sourceTree = "<group>"; };
+		FB89BCEC1C61E66E004108B6 /* iPhone_BackBlackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_BackBlackArrow.png; sourceTree = "<group>"; };
+		FB89BCED1C61E66E004108B6 /* iPhone_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_menu.png; sourceTree = "<group>"; };
+		FB89BCEE1C61E66E004108B6 /* iPhone_white_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone_white_menu.png; sourceTree = "<group>"; };
+		FBEC6D381BFCE19300D69C8D /* DHxlsReaderIOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DHxlsReaderIOS.xcodeproj; sourceTree = "<group>"; };
+		FBEC6D471BFCE62200D69C8D /* studypro.xls */ = {isa = PBXFileReference; lastKnownFileType = file; name = studypro.xls; path = sqldb/studypro.xls; sourceTree = "<group>"; };
+		FBF340061BFCF794007C8235 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FBF340121BFD1418007C8235 /* itunesartwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itunesartwork.png; sourceTree = "<group>"; };
+		FBF340131BFD1418007C8235 /* itunesartwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "itunesartwork@2x.png"; sourceTree = "<group>"; };
+		FBF3402C1BFD1FF3007C8235 /* icons_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_29.png; sourceTree = "<group>"; };
+		FBF3402D1BFD1FF3007C8235 /* icons_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_58.png; sourceTree = "<group>"; };
+		FBF3402E1BFD1FF3007C8235 /* icons_60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_60.png; sourceTree = "<group>"; };
+		FBF3402F1BFD1FF3007C8235 /* icons_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_80.png; sourceTree = "<group>"; };
+		FBF340301BFD1FF3007C8235 /* icons_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_120.png; sourceTree = "<group>"; };
+		FBF340311BFD1FF3007C8235 /* icons_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons_152.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AF12E541BB18DF100805FDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E42873A1C7C4AF0009C7681 /* libiconv.tbd in Frameworks */,
+				FBF340091BFCF96A007C8235 /* libDHxlsReaderIOS.a in Frameworks */,
+				FBF340071BFCF794007C8235 /* QuartzCore.framework in Frameworks */,
+				6AF12ED11BB1D23B00805FDC /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AF12E6D1BB18DF200805FDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A427EDF1BB2D9F7000F4093 /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				6AF12EC81BB1A70200805FDC /* StudyCategoryTableViewCell.h */,
+				6AF12EC91BB1A70200805FDC /* StudyCategoryTableViewCell.m */,
+				6AF12EC51BB1A4DA00805FDC /* StudyCatViewController.h */,
+				6AF12EC61BB1A4FB00805FDC /* StudyCatViewController.m */,
+				6AF12EE31BB221FA00805FDC /* StudyQuestionViewController.h */,
+				6AF12EE41BB2221E00805FDC /* StudyQuestionViewController.m */,
+				6A427EDC1BB24248000F4093 /* StudyQuizTableViewCell.h */,
+				6A427EDD1BB24266000F4093 /* StudyQuizTableViewCell.m */,
+			);
+			name = Study;
+			sourceTree = "<group>";
+		};
+		6A427EE01BB2DA05000F4093 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				6A427EEA1BB2EA49000F4093 /* QuizQuestionViewController.h */,
+				6A427EEB1BB2EA49000F4093 /* QuizQuestionViewController.m */,
+				6A427EE11BB2DA5C000F4093 /* QuizCatViewController.h */,
+				6A427EE21BB2DA8E000F4093 /* QuizCatViewController.m */,
+				6A427EE41BB2DAC9000F4093 /* QuizCategoryTableViewCell.h */,
+				6A427EE51BB2DAE5000F4093 /* QuizCategoryTableViewCell.m */,
+			);
+			name = Quiz;
+			sourceTree = "<group>";
+		};
+		6AF12E4E1BB18DF100805FDC = {
+			isa = PBXGroup;
+			children = (
+				6E4287391C7C4AEF009C7681 /* libiconv.tbd */,
+				FBF340061BFCF794007C8235 /* QuartzCore.framework */,
+				FBEC6D381BFCE19300D69C8D /* DHxlsReaderIOS.xcodeproj */,
+				6AF12ED01BB1D23B00805FDC /* libsqlite3.dylib */,
+				6AF12E591BB18DF100805FDC /* StudyPro */,
+				6AF12E731BB18DF200805FDC /* StudyProTests */,
+				6AF12E581BB18DF100805FDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AF12E581BB18DF100805FDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AF12E571BB18DF100805FDC /* StudyPro.app */,
+				6AF12E701BB18DF200805FDC /* StudyProTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AF12E591BB18DF100805FDC /* StudyPro */ = {
+			isa = PBXGroup;
+			children = (
+				6A427EE01BB2DA05000F4093 /* Quiz */,
+				6A427EDF1BB2D9F7000F4093 /* Study */,
+				6AF12EDC1BB1D84C00805FDC /* Common */,
+				6AF12E5E1BB18DF100805FDC /* AppDelegate.h */,
+				6AF12E5F1BB18DF100805FDC /* AppDelegate.m */,
+				6AF12E611BB18DF100805FDC /* ViewController.h */,
+				6AF12E621BB18DF100805FDC /* ViewController.m */,
+				6AED43ED1BB4148A007CF5AA /* Main_iPad.storyboard */,
+				6AF12E641BB18DF200805FDC /* Main.storyboard */,
+				6AF12E671BB18DF200805FDC /* Images.xcassets */,
+				6AF12E691BB18DF200805FDC /* LaunchScreen.xib */,
+				6EDD7BA21C787340006DCBCD /* LaunchScreen_iPad.xib */,
+				6AF12ED21BB1D44B00805FDC /* SQLiteDatabase */,
+				6AF12E821BB196B600805FDC /* Resource */,
+				6AF12E5A1BB18DF100805FDC /* Supporting Files */,
+			);
+			path = StudyPro;
+			sourceTree = "<group>";
+		};
+		6AF12E5A1BB18DF100805FDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AF12E5B1BB18DF100805FDC /* Info.plist */,
+				6AF12E5C1BB18DF100805FDC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AF12E731BB18DF200805FDC /* StudyProTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AF12E761BB18DF200805FDC /* StudyProTests.m */,
+				6AF12E741BB18DF200805FDC /* Supporting Files */,
+			);
+			path = StudyProTests;
+			sourceTree = "<group>";
+		};
+		6AF12E741BB18DF200805FDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AF12E751BB18DF200805FDC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AF12E821BB196B600805FDC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FB89BCE41C61E66E004108B6 /* Font */,
+				6EDD7BA01C6AD820006DCBCD /* iPhone_QuizMarkButton.png */,
+				FB89BCEB1C61E66E004108B6 /* iPhone_BackArrow.png */,
+				6EDD7B9C1C6A6880006DCBCD /* iPhone_QuestionImageButton.png */,
+				FB89BCEC1C61E66E004108B6 /* iPhone_BackBlackArrow.png */,
+				FB89BCED1C61E66E004108B6 /* iPhone_menu.png */,
+				FB89BCEE1C61E66E004108B6 /* iPhone_white_menu.png */,
+				FB4F2D111C5F4D2B008753E0 /* iPhone_Back.png */,
+				FB4F2D121C5F4D2B008753E0 /* iPhone_bars.png */,
+				FB4F2D131C5F4D2B008753E0 /* iPhone_Line.png */,
+				FB4F2D141C5F4D2B008753E0 /* iPhone_Markquestion.png */,
+				FB4F2D151C5F4D2B008753E0 /* iphone_next.png */,
+				FB4F2D161C5F4D2B008753E0 /* Quizbutton.png */,
+				FB4F2D171C5F4D2B008753E0 /* studybutton.png */,
+				FB4F2D181C5F4D2B008753E0 /* testbutton.png */,
+				FBF3402C1BFD1FF3007C8235 /* icons_29.png */,
+				FBF3402D1BFD1FF3007C8235 /* icons_58.png */,
+				FBF3402E1BFD1FF3007C8235 /* icons_60.png */,
+				FBF3402F1BFD1FF3007C8235 /* icons_80.png */,
+				FBF340301BFD1FF3007C8235 /* icons_120.png */,
+				FBF340311BFD1FF3007C8235 /* icons_152.png */,
+				FBF340121BFD1418007C8235 /* itunesartwork.png */,
+				FBF340131BFD1418007C8235 /* itunesartwork@2x.png */,
+				FBEC6D471BFCE62200D69C8D /* studypro.xls */,
+				6AF12ECD1BB1D1AE00805FDC /* sqldb */,
+				6AF12ECB1BB1B02C00805FDC /* no_media.jpg */,
+				6AF12EC31BB1997D00805FDC /* Default.png */,
+				6AF12E831BB196B600805FDC /* back@2x.png */,
+				6AF12E841BB196B600805FDC /* back_button@2x~iphone.png */,
+				6AF12E851BB196B600805FDC /* back_button_ipad.png */,
+				6AF12E861BB196B600805FDC /* back_button~iphone.png */,
+				6AF12E871BB196B600805FDC /* back_default_pad.png */,
+				6AF12E881BB196B600805FDC /* back_ipad.png */,
+				6AF12E891BB196B600805FDC /* btn_back@2x.png */,
+				6AF12E8A1BB196B600805FDC /* btn_back_ipad.png */,
+				6AF12E8B1BB196B600805FDC /* btn_grade@2x.png */,
+				6AF12E8C1BB196B600805FDC /* btn_grade_ipad.png */,
+				6AF12E8D1BB196B700805FDC /* btn_mark_question@2x.png */,
+				6AF12E8E1BB196B700805FDC /* btn_mark_question_ipad.png */,
+				6AF12E8F1BB196B700805FDC /* btn_next@2x.png */,
+				6AF12E901BB196B700805FDC /* btn_next_ipad.png */,
+				6AF12E911BB196B700805FDC /* btn_quiz@2x.png */,
+				6AF12E921BB196B700805FDC /* btn_quiz_ipad.png */,
+				6AF12E931BB196B700805FDC /* btn_reset_scores~ipad.png */,
+				6AF12E941BB196B700805FDC /* btn_study@2x.png */,
+				6AF12E951BB196B700805FDC /* btn_study_ipad.png */,
+				6AF12E971BB196B700805FDC /* Default_ipad.png */,
+				6AF12E981BB196B700805FDC /* devide_line_ipad.png */,
+				6AF12E991BB196B700805FDC /* drop_down@2x.png */,
+				6AF12E9A1BB196B700805FDC /* green_dot@2x.png */,
+				6AF12E9B1BB196B700805FDC /* green_dot_ipad.png */,
+				6AF12E9C1BB196B700805FDC /* placeholder.png */,
+				6AF12E9D1BB196B700805FDC /* quiz.png */,
+				6AF12E9E1BB196B700805FDC /* red_dot@2x.png */,
+				6AF12E9F1BB196B700805FDC /* red_dot_ipad.png */,
+				6AF12EA01BB196B700805FDC /* study.png */,
+				6AF12EA11BB196B700805FDC /* yellow_dot@2x.png */,
+				6AF12EA21BB196B700805FDC /* yellow_dot_ipad.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6AF12ECD1BB1D1AE00805FDC /* sqldb */ = {
+			isa = PBXGroup;
+			children = (
+				6E42873B1C7C4D40009C7681 /* studypro.sqlite */,
+			);
+			path = sqldb;
+			sourceTree = "<group>";
+		};
+		6AF12ED21BB1D44B00805FDC /* SQLiteDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				6AF12ED31BB1D44B00805FDC /* SQLiteDatabase.h */,
+				6AF12ED41BB1D44B00805FDC /* SQLiteDatabase.m */,
+				6AF12ED51BB1D44B00805FDC /* SQLiteResult.h */,
+				6AF12ED61BB1D44B00805FDC /* SQLiteResult.m */,
+				6AF12ED71BB1D44B00805FDC /* SQLiteRow.h */,
+				6AF12ED81BB1D44B00805FDC /* SQLiteRow.m */,
+			);
+			path = SQLiteDatabase;
+			sourceTree = "<group>";
+		};
+		6AF12EDC1BB1D84C00805FDC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6AF12EDD1BB1D8E000805FDC /* CategoryData.h */,
+				6AF12EDE1BB1D90900805FDC /* CategoryData.m */,
+				6AF12EE01BB2154B00805FDC /* QuestionData.h */,
+				6AF12EE11BB2156500805FDC /* QuestionData.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		FB89BCE41C61E66E004108B6 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FB89BCE51C61E66E004108B6 /* AbrilFatface-Regular.ttf */,
+				FB89BCE61C61E66E004108B6 /* Poppins-Bold.ttf */,
+				FB89BCE71C61E66E004108B6 /* Poppins-Light.ttf */,
+				FB89BCE81C61E66E004108B6 /* Poppins-Medium.ttf */,
+				FB89BCE91C61E66E004108B6 /* Poppins-Regular.ttf */,
+				FB89BCEA1C61E66E004108B6 /* Poppins-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		FBEC6D391BFCE19300D69C8D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBEC6D3E1BFCE19400D69C8D /* libDHxlsReaderIOS.a */,
+				FBEC6D401BFCE19400D69C8D /* libDHxlsReader.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AF12E561BB18DF100805FDC /* StudyPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AF12E7A1BB18DF200805FDC /* Build configuration list for PBXNativeTarget "StudyPro" */;
+			buildPhases = (
+				6AF12E531BB18DF100805FDC /* Sources */,
+				6AF12E541BB18DF100805FDC /* Frameworks */,
+				6AF12E551BB18DF100805FDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudyPro;
+			productName = StudyPro;
+			productReference = 6AF12E571BB18DF100805FDC /* StudyPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AF12E6F1BB18DF200805FDC /* StudyProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AF12E7D1BB18DF200805FDC /* Build configuration list for PBXNativeTarget "StudyProTests" */;
+			buildPhases = (
+				6AF12E6C1BB18DF200805FDC /* Sources */,
+				6AF12E6D1BB18DF200805FDC /* Frameworks */,
+				6AF12E6E1BB18DF200805FDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AF12E721BB18DF200805FDC /* PBXTargetDependency */,
+			);
+			name = StudyProTests;
+			productName = StudyProTests;
+			productReference = 6AF12E701BB18DF200805FDC /* StudyProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AF12E4F1BB18DF100805FDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = BluesharkUpwork;
+				TargetAttributes = {
+					6AF12E561BB18DF100805FDC = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = MJ4F4S4E5M;
+					};
+					6AF12E6F1BB18DF200805FDC = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 6AF12E561BB18DF100805FDC;
+					};
+				};
+			};
+			buildConfigurationList = 6AF12E521BB18DF100805FDC /* Build configuration list for PBXProject "StudyPro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AF12E4E1BB18DF100805FDC;
+			productRefGroup = 6AF12E581BB18DF100805FDC /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FBEC6D391BFCE19300D69C8D /* Products */;
+					ProjectRef = FBEC6D381BFCE19300D69C8D /* DHxlsReaderIOS.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6AF12E561BB18DF100805FDC /* StudyPro */,
+				6AF12E6F1BB18DF200805FDC /* StudyProTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FBEC6D3E1BFCE19400D69C8D /* libDHxlsReaderIOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDHxlsReaderIOS.a;
+			remoteRef = FBEC6D3D1BFCE19400D69C8D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FBEC6D401BFCE19400D69C8D /* libDHxlsReader.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDHxlsReader.a;
+			remoteRef = FBEC6D3F1BFCE19400D69C8D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AF12E551BB18DF100805FDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB4F2D1B1C5F4D2B008753E0 /* iPhone_Line.png in Resources */,
+				6AF12EBF1BB196B700805FDC /* red_dot_ipad.png in Resources */,
+				6AF12EB11BB196B700805FDC /* btn_quiz@2x.png in Resources */,
+				6AF12EBC1BB196B700805FDC /* placeholder.png in Resources */,
+				6AF12EA91BB196B700805FDC /* btn_back@2x.png in Resources */,
+				6AF12EC41BB1997D00805FDC /* Default.png in Resources */,
+				FB4F2D191C5F4D2B008753E0 /* iPhone_Back.png in Resources */,
+				FB89BCF51C61E66E004108B6 /* iPhone_BackArrow.png in Resources */,
+				FB89BCEF1C61E66E004108B6 /* AbrilFatface-Regular.ttf in Resources */,
+				FBF340321BFD1FF3007C8235 /* icons_29.png in Resources */,
+				6AF12E661BB18DF200805FDC /* Main.storyboard in Resources */,
+				6AF12EC21BB196B700805FDC /* yellow_dot_ipad.png in Resources */,
+				6AF12EB81BB196B700805FDC /* devide_line_ipad.png in Resources */,
+				6AF12EBB1BB196B700805FDC /* green_dot_ipad.png in Resources */,
+				FBF340331BFD1FF3007C8235 /* icons_58.png in Resources */,
+				FBF340351BFD1FF3007C8235 /* icons_80.png in Resources */,
+				FB89BCF41C61E66E004108B6 /* Poppins-SemiBold.ttf in Resources */,
+				FB4F2D1E1C5F4D2B008753E0 /* Quizbutton.png in Resources */,
+				6EDD7BA11C6AD820006DCBCD /* iPhone_QuizMarkButton.png in Resources */,
+				FB4F2D201C5F4D2B008753E0 /* testbutton.png in Resources */,
+				FB4F2D1C1C5F4D2B008753E0 /* iPhone_Markquestion.png in Resources */,
+				FBF340361BFD1FF3007C8235 /* icons_120.png in Resources */,
+				6AF12EC01BB196B700805FDC /* study.png in Resources */,
+				6AF12EA71BB196B700805FDC /* back_default_pad.png in Resources */,
+				6AF12EB71BB196B700805FDC /* Default_ipad.png in Resources */,
+				6AF12EB31BB196B700805FDC /* btn_reset_scores~ipad.png in Resources */,
+				FB4F2D1F1C5F4D2B008753E0 /* studybutton.png in Resources */,
+				6AF12EBD1BB196B700805FDC /* quiz.png in Resources */,
+				FB89BCF01C61E66E004108B6 /* Poppins-Bold.ttf in Resources */,
+				6AF12EC11BB196B700805FDC /* yellow_dot@2x.png in Resources */,
+				FBF3401A1BFD1418007C8235 /* itunesartwork.png in Resources */,
+				6AF12EB51BB196B700805FDC /* btn_study_ipad.png in Resources */,
+				6AF12EBE1BB196B700805FDC /* red_dot@2x.png in Resources */,
+				6AF12EAE1BB196B700805FDC /* btn_mark_question_ipad.png in Resources */,
+				6AF12EA61BB196B700805FDC /* back_button~iphone.png in Resources */,
+				6AF12ECC1BB1B02C00805FDC /* no_media.jpg in Resources */,
+				6AF12EBA1BB196B700805FDC /* green_dot@2x.png in Resources */,
+				6AF12EB01BB196B700805FDC /* btn_next_ipad.png in Resources */,
+				6AED43EF1BB4148A007CF5AA /* Main_iPad.storyboard in Resources */,
+				FB4F2D1D1C5F4D2B008753E0 /* iphone_next.png in Resources */,
+				6AF12EA81BB196B700805FDC /* back_ipad.png in Resources */,
+				6AF12EA31BB196B700805FDC /* back@2x.png in Resources */,
+				FB89BCF31C61E66E004108B6 /* Poppins-Regular.ttf in Resources */,
+				6AF12E6B1BB18DF200805FDC /* LaunchScreen.xib in Resources */,
+				FBF340371BFD1FF3007C8235 /* icons_152.png in Resources */,
+				6E42873C1C7C4D40009C7681 /* studypro.sqlite in Resources */,
+				6AF12EAC1BB196B700805FDC /* btn_grade_ipad.png in Resources */,
+				6EDD7BA31C787340006DCBCD /* LaunchScreen_iPad.xib in Resources */,
+				FB4F2D1A1C5F4D2B008753E0 /* iPhone_bars.png in Resources */,
+				6EDD7B9D1C6A6880006DCBCD /* iPhone_QuestionImageButton.png in Resources */,
+				6AF12EAB1BB196B700805FDC /* btn_grade@2x.png in Resources */,
+				6AF12E681BB18DF200805FDC /* Images.xcassets in Resources */,
+				6AF12EAA1BB196B700805FDC /* btn_back_ipad.png in Resources */,
+				6AF12EB91BB196B700805FDC /* drop_down@2x.png in Resources */,
+				FBEC6D481BFCE62200D69C8D /* studypro.xls in Resources */,
+				6AF12EB41BB196B700805FDC /* btn_study@2x.png in Resources */,
+				6AF12EA41BB196B700805FDC /* back_button@2x~iphone.png in Resources */,
+				FBF3401B1BFD1418007C8235 /* itunesartwork@2x.png in Resources */,
+				6AF12EAD1BB196B700805FDC /* btn_mark_question@2x.png in Resources */,
+				FBF340341BFD1FF3007C8235 /* icons_60.png in Resources */,
+				FB89BCF81C61E66E004108B6 /* iPhone_white_menu.png in Resources */,
+				FB89BCF71C61E66E004108B6 /* iPhone_menu.png in Resources */,
+				FB89BCF21C61E66E004108B6 /* Poppins-Medium.ttf in Resources */,
+				6AF12EAF1BB196B700805FDC /* btn_next@2x.png in Resources */,
+				FB89BCF61C61E66E004108B6 /* iPhone_BackBlackArrow.png in Resources */,
+				FB89BCF11C61E66E004108B6 /* Poppins-Light.ttf in Resources */,
+				6AF12EB21BB196B700805FDC /* btn_quiz_ipad.png in Resources */,
+				6AF12EA51BB196B700805FDC /* back_button_ipad.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AF12E6E1BB18DF200805FDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AF12E531BB18DF100805FDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AF12EDB1BB1D44B00805FDC /* SQLiteRow.m in Sources */,
+				6AF12EDF1BB1D90900805FDC /* CategoryData.m in Sources */,
+				6AF12ED91BB1D44B00805FDC /* SQLiteDatabase.m in Sources */,
+				6A427EEC1BB2EA49000F4093 /* QuizQuestionViewController.m in Sources */,
+				6A427EE31BB2DA8E000F4093 /* QuizCatViewController.m in Sources */,
+				6A427EE61BB2DAE5000F4093 /* QuizCategoryTableViewCell.m in Sources */,
+				6AF12E631BB18DF100805FDC /* ViewController.m in Sources */,
+				6AF12E601BB18DF100805FDC /* AppDelegate.m in Sources */,
+				6AF12EE21BB2156500805FDC /* QuestionData.m in Sources */,
+				6AF12E5D1BB18DF100805FDC /* main.m in Sources */,
+				6AF12EDA1BB1D44B00805FDC /* SQLiteResult.m in Sources */,
+				6A427EDE1BB24266000F4093 /* StudyQuizTableViewCell.m in Sources */,
+				6AF12EC71BB1A4FB00805FDC /* StudyCatViewController.m in Sources */,
+				6AF12EE51BB2221E00805FDC /* StudyQuestionViewController.m in Sources */,
+				6AF12ECA1BB1A70200805FDC /* StudyCategoryTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AF12E6C1BB18DF200805FDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AF12E771BB18DF200805FDC /* StudyProTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AF12E721BB18DF200805FDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AF12E561BB18DF100805FDC /* StudyPro */;
+			targetProxy = 6AF12E711BB18DF200805FDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6AED43ED1BB4148A007CF5AA /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AED43EE1BB4148A007CF5AA /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		6AF12E641BB18DF200805FDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AF12E651BB18DF200805FDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6AF12E691BB18DF200805FDC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AF12E6A1BB18DF200805FDC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AF12E781BB18DF200805FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AF12E791BB18DF200805FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AF12E7B1BB18DF200805FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					DHxlsReader,
+				);
+				INFOPLIST_FILE = StudyPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.david.app.pilot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AF12E7C1BB18DF200805FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					DHxlsReader,
+				);
+				INFOPLIST_FILE = StudyPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.david.app.pilot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6AF12E7E1BB18DF200805FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StudyProTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josh.app.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyPro.app/StudyPro";
+			};
+			name = Debug;
+		};
+		6AF12E7F1BB18DF200805FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StudyProTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josh.app.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StudyPro.app/StudyPro";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AF12E521BB18DF100805FDC /* Build configuration list for PBXProject "StudyPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AF12E781BB18DF200805FDC /* Debug */,
+				6AF12E791BB18DF200805FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AF12E7A1BB18DF200805FDC /* Build configuration list for PBXNativeTarget "StudyPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AF12E7B1BB18DF200805FDC /* Debug */,
+				6AF12E7C1BB18DF200805FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AF12E7D1BB18DF200805FDC /* Build configuration list for PBXNativeTarget "StudyProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AF12E7E1BB18DF200805FDC /* Debug */,
+				6AF12E7F1BB18DF200805FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AF12E4F1BB18DF100805FDC /* Project object */;
+}
