@@ -77,7 +77,7 @@
     
     if([selectedData.category_name isEqualToString:@"Airplane Systems"]){
         
-        getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d AND airplane_type = '%@' OR category_id = %d AND airplane_type = 'NONE'", (int)selectedData.category_id, [AppDelegate sharedDelegate].selectedAirPlane, (int)selectedData.category_id];
+        getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d AND airplane_type = '%@' OR category_id = %d AND airplane_type = 'Normal'", (int)selectedData.category_id, [AppDelegate sharedDelegate].selectedAirPlane, (int)selectedData.category_id];
     }else{
         getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d", (int)selectedData.category_id];
     }
