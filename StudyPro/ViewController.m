@@ -11,8 +11,13 @@
 #import "CategoryData.h"
 #import "QuestionData.h"
 #import "QuizQuestionViewController.h"
+#import "StudyCatViewController.h"
 
 @interface ViewController ()
+{
+    //PickerData Array
+    NSArray *_pickerData;
+}
 
 @end
 
@@ -22,7 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Picker Data
+    _pickerData = @[@"C152", @"C172M", @"C172SP", @"SR22"];
+    
+    
     NSString *query = @"SELECT * FROM tbl_category";
+    __block NSString *getQuestionCountQuery;
     
     [[SQLiteDatabase sharedInstance] executeQuery:query
                                        withParams:nil
@@ -38,7 +48,16 @@
                                                   newData.category_image = (NSString *)[row objectForColumnName:@"category_imagename"];
                                                   newData.category_bestscore = (NSString *)[row objectForColumnName:@"category_bestscore"];
                                                   
-                                                  NSString *getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d", (int)newData.category_id];
+                                                  if([newData.category_name isEqualToString:@"Airplane Systems"]){
+                                                      
+                                                     getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d AND airplane_type = '%@' OR category_id = %d AND airplane_type = 'Normal'", (int)newData.category_id, [AppDelegate sharedDelegate].selectedAirPlane, (int)newData.category_id];
+                                                  
+                                                  }
+                                                  else{
+                                                      
+                                                      getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d", (int)newData.category_id];
+
+                                                  }
                                                   
                                                   [[SQLiteDatabase sharedInstance] executeQuery:getQuestionCountQuery
                                                                                      withParams:nil
@@ -72,9 +91,11 @@
                                           failure:^(NSString *errorMessage) {
                                               NSLog(@"Query failed with error - %@",errorMessage);
                                           }];
-    
     selectedAirIndex = 0;
     [AppDelegate sharedDelegate].selectedAirPlane = @"C152";
+    
+    //Set the PickerView position as bottom of the screen at launch the app for iPad Pro
+    [airplaneList setFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, airplaneList.frame.size.height)];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -82,6 +103,75 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)resaveCategoryCount {
+    
+    //Refresh the Total Question counts of the Airplane Systems
+    NSString *query = @"SELECT * FROM tbl_category";
+    __block NSString *getQuestionCountQuery;
+    
+    [[SQLiteDatabase sharedInstance] executeQuery:query
+                                       withParams:nil
+                                          success:^(SQLiteResult *result) {
+                                              NSLog(@"Result count %d",(int)result.count);
+                                              
+                                              for(SQLiteRow *row in result) {
+                                                  
+                                                  CategoryData *newData = [[CategoryData alloc] init];
+                                                  NSString *cateID = [NSString stringWithFormat:@"%@", [row objectForColumnName:@"category_id"]];
+                                                  newData.category_id = cateID.intValue;
+                                                  newData.category_name = (NSString *)[row objectForColumnName:@"category_name"];
+                                                  NSLog(@"Category_Name is %@", newData.category_name);
+                                                  newData.category_image = (NSString *)[row objectForColumnName:@"category_imagename"];
+                                                  newData.category_bestscore = (NSString *)[row objectForColumnName:@"category_bestscore"];
+                                                  
+                                                  if([newData.category_name isEqualToString:@"Airplane Systems"]){
+                                                      
+                                                      getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d AND airplane_type = '%@' OR category_id = %d AND airplane_type = 'Normal'", (int)newData.category_id, [AppDelegate sharedDelegate].selectedAirPlane, (int)newData.category_id];
+                                                      
+                                                  }
+                                                  else{
+                                                      
+                                                      getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d", (int)newData.category_id];
+                                                      
+                                                  }
+                                                  
+                                                  [[SQLiteDatabase sharedInstance] executeQuery:getQuestionCountQuery
+                                                                                     withParams:nil
+                                                                                        success:^(SQLiteResult *result) {
+                                                                                            NSLog(@" Query = %@ Result count %d",getQuestionCountQuery, (int)result.count);
+                                                                                            newData.category_totalcount = result.count;
+                                                                                            
+                                                                                        }
+                                                                                        failure:^(NSString *errorMessage) {
+                                                                                            NSLog(@"Query failed with error - %@",errorMessage);
+                                                                                        }];
+                                                  
+                                                  NSString *getMarkedQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where category_id = %d AND question_marked = 1", (int)newData.category_id];
+                                                  
+                                                  [[SQLiteDatabase sharedInstance] executeQuery:getMarkedQuestionCountQuery
+                                                                                     withParams:nil
+                                                                                        success:^(SQLiteResult *result) {
+                                                                                            NSLog(@" Query = %@ Result count %d",getMarkedQuestionCountQuery, (int)result.count);
+                                                                                            newData.category_markedcount = result.count;
+                                                                                            
+                                                                                        }
+                                                                                        failure:^(NSString *errorMessage) {
+                                                                                            NSLog(@"Query failed with error - %@",errorMessage);
+                                                                                        }];
+                                                  
+                                                  
+                                                  [[AppDelegate sharedDelegate].categoryArray addObject:newData];
+                                                  
+                                              }
+                                          }
+                                          failure:^(NSString *errorMessage) {
+                                              NSLog(@"Query failed with error - %@",errorMessage);
+                                          }];
+}
+
+
 
 - (IBAction)clickedTestAllButton:(id)sender{
     
@@ -93,7 +183,7 @@
         
     }else{
         
-        NSString *getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions ORDER BY Random() LIMIT 60"];
+        NSString *getQuestionCountQuery = [NSString stringWithFormat:@" SELECT * FROM tbl_questions where airplane_type = '%@' OR airplane_type = 'Normal' ORDER BY Random() LIMIT 60",[AppDelegate sharedDelegate].selectedAirPlane];
         
         if([[AppDelegate sharedDelegate].questionStudyArray count] > 0)
             [[AppDelegate sharedDelegate].questionStudyArray removeAllObjects];
@@ -201,63 +291,27 @@
 }
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
-    return 4;
+    return _pickerData.count;
 }
+
+- (void)selectRow:(NSInteger)row inComponent:(NSInteger)component animated:(BOOL)animated{}
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     
-    NSString    *returnString;
-    
-    switch (row) {
-        case 0:
-            returnString = @"C152";
-            break;
-          
-        case 1:
-            returnString = @"C172M";
-            break;
-        case 2:
-            returnString = @"C172SP";
-            break;
-        case 3:
-            returnString = @"SR22";
-            break;
-            
-        default:
-            returnString = @"C152";
-            break;
-    }
-    
-    return returnString;
+    return _pickerData[row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    switch (row) {
-        case 0:
-            [AppDelegate sharedDelegate].selectedAirPlane = @"C152";
-            [selectAirTypeButton setTitle:@"C152" forState:UIControlStateNormal];
-            break;
-            
-        case 1:
-            [AppDelegate sharedDelegate].selectedAirPlane = @"C172M";
-            [selectAirTypeButton setTitle:@"C172M" forState:UIControlStateNormal];
-            break;
-        case 2:
-            [AppDelegate sharedDelegate].selectedAirPlane = @"C172SP";
-            [selectAirTypeButton setTitle:@"C172SP" forState:UIControlStateNormal];
-            break;
-        case 3:
-            [AppDelegate sharedDelegate].selectedAirPlane = @"SR22";
-            [selectAirTypeButton setTitle:@"SR22" forState:UIControlStateNormal];
-            break;
-            
-        default:
-            [AppDelegate sharedDelegate].selectedAirPlane = @"C152";
-            [selectAirTypeButton setTitle:@"C152" forState:UIControlStateNormal];
-            break;
-    }
+    
+    [AppDelegate sharedDelegate].selectedAirPlane = _pickerData[row];
+    [selectAirTypeButton setTitle:_pickerData[row] forState:UIControlStateNormal];
+    NSLog(@"Selected AirPlane is %@", [AppDelegate sharedDelegate].selectedAirPlane);
     
     selectedAirIndex = row;
+    
+    //Resave the selected Airplane System
+    [self resaveCategoryCount];
+
     [UIView  beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5];
     
@@ -265,6 +319,5 @@
     
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView commitAnimations];
-    
 }
 @end

@@ -18,6 +18,8 @@
 
 @property (nonatomic, retain) IBOutlet UIPickerView        *airplaneList;
 @property (nonatomic, retain) IBOutlet UIButton            *selectAirTypeButton;
+@property (nonatomic, retain) NSString       *selectedAirPlane;
+
 
 - (IBAction)ClickedSelectCommonButton:(id)sender;
 - (IBAction)clickedTestAllButton:(id)sender;
