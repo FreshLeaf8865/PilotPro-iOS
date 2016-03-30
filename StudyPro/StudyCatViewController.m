@@ -62,11 +62,37 @@
 
     CategoryData *newData;
     newData = [[AppDelegate sharedDelegate].categoryArray objectAtIndex:indexPath.row];
+<<<<<<< Updated upstream
     [cell.categoryImage setImage:[UIImage imageNamed:newData.category_image]];
     [cell.categoryTitle setText:newData.category_name];
     [cell.categoryQuestionCount setText:[NSString stringWithFormat:@"Total Questions: %d", (int)newData.category_totalcount]];
     [cell.categoryMarkedCount setText:[NSString stringWithFormat:@"Marked Questions: %d", (int)newData.category_markedcount]];
+=======
     
+    NSLog(@"Total Count is %d", (int)newData.category_totalcount );
+>>>>>>> Stashed changes
+    
+    if ([[AppDelegate sharedDelegate].selectedAirPlane isEqualToString:@"SR22"] && [newData.category_name isEqualToString:@"Airplane Systems"])
+    {
+        [cell.categoryImage setImage:[UIImage imageNamed:newData.category_image]];
+        [cell.categoryTitle setText:newData.category_name];
+        [cell.categoryQuestionCount setText:[NSString stringWithFormat:@"Total Questions: %d", 123]];
+        [cell.categoryMarkedCount setText:[NSString stringWithFormat:@"Marked Questions: %d", (int)newData.category_markedcount]];
+    }
+    else if ([[AppDelegate sharedDelegate].selectedAirPlane isEqualToString:@"C172SP"] && [newData.category_name isEqualToString:@"Airplane Systems"])
+    {
+        [cell.categoryImage setImage:[UIImage imageNamed:newData.category_image]];
+        [cell.categoryTitle setText:newData.category_name];
+        [cell.categoryQuestionCount setText:[NSString stringWithFormat:@"Total Questions: %d", 118]];
+        [cell.categoryMarkedCount setText:[NSString stringWithFormat:@"Marked Questions: %d", (int)newData.category_markedcount]];
+    }
+    else
+    {
+        [cell.categoryImage setImage:[UIImage imageNamed:newData.category_image]];
+        [cell.categoryTitle setText:newData.category_name];
+        [cell.categoryQuestionCount setText:[NSString stringWithFormat:@"Total Questions: %d", (int)newData.category_totalcount]];
+        [cell.categoryMarkedCount setText:[NSString stringWithFormat:@"Marked Questions: %d", (int)newData.category_markedcount]];
+    }
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
